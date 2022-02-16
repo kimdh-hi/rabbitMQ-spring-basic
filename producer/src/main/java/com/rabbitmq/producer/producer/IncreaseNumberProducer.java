@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-@Service
+//@Service
 public class IncreaseNumberProducer {
     private static final Logger logger = LoggerFactory.getLogger(IncreaseNumberProducer.class);
     private AtomicLong number = new AtomicLong(0L);
