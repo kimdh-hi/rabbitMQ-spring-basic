@@ -1,7 +1,7 @@
 package com.rabbitmq.producer;
 
-import com.rabbitmq.producer.producer.test.TestDto;
-import com.rabbitmq.producer.producer.test.TestProducer;
+import com.rabbitmq.producer.producer.review.TestDto;
+import com.rabbitmq.producer.producer.review.TestProducer;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.rabbitmq.producer.producer.test;
+package com.rabbitmq.consumer.consumer.review;
 
 public class TestDto {
 

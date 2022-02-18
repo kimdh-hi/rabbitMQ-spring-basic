@@ -1,4 +1,4 @@
-package com.rabbitmq.consumer.consumer;
+package com.rabbitmq.consumer.consumer.exchnage_direct;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -6,15 +6,14 @@ import com.rabbitmq.consumer.entity.Picture;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.stereotype.Service;
 
 //@Service
-public class ImageConsumer {
+public class PictureImageConsumer {
 
-    private static final Logger logger = LoggerFactory.getLogger(ImageConsumer.class);
+    private static final Logger logger = LoggerFactory.getLogger(PictureImageConsumer.class);
     private final ObjectMapper mapper;
 
-    public ImageConsumer(ObjectMapper mapper) {
+    public PictureImageConsumer(ObjectMapper mapper) {
         this.mapper = mapper;
     }
 
