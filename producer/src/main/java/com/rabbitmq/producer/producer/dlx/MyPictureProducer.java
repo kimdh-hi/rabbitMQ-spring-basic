@@ -24,6 +24,6 @@ public class MyPictureProducer {
         logger.info("message = {}", picture);
         String pictureJson = mapper.writeValueAsString(picture);
 
-        template.convertAndSend("q.mypicture", picture.getType(), pictureJson);
+        template.convertAndSend("x.mypicture", picture.getType(), pictureJson);
     }
 }
