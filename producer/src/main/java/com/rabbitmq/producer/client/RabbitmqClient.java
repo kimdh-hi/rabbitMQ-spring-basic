@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.util.Base64;
 import java.util.List;
 
-@Service
+//@Service
 public class RabbitmqClient {
 
     public List<RabbitmqQueue> getAllQueue() {

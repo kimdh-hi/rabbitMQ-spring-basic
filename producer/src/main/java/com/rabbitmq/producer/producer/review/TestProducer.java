@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.stereotype.Service;
 
 //@Service
 public class TestProducer {
@@ -22,6 +23,6 @@ public class TestProducer {
         logger.info("producer message = {}", dto);
         String dtoJson = mapper.writeValueAsString(dto);
 
-        rabbitTemplate.convertAndSend("x.Ex", dto.getType(), dtoJson);
+        rabbitTemplate.convertAndSend("x.test", dto.getType(), dtoJson);
     }
 }
