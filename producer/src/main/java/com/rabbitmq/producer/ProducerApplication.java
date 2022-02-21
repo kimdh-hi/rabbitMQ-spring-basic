@@ -32,8 +32,7 @@ public class ProducerApplication implements  CommandLineRunner{
 			} else {
 				employee = new Employee((long)i, "name" + i, LocalDate.now());
 			}
-			producer.sendMessageToMarketing(employee);
-//			producer.sendMessageToAccounting(employee);
+			producer.sendMessage(employee);
 		}
 	}
 

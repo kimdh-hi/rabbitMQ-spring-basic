@@ -18,14 +18,9 @@ public class SpringRetryEmployeeProducer {
         this.om = om;
     }
 
-    public void sendMessageToAccounting(Employee employee) throws IOException {
+    public void sendMessage(Employee employee) throws IOException {
         String employeeJson = om.writeValueAsString(employee);
 
-        rabbitTemplate.convertAndSend("x.employee.work", "", employeeJson);
-    }
-
-    public void sendMessageToMarketing(Employee employee) throws IOException {
-        String employeeJson = om.writeValueAsString(employee);
         rabbitTemplate.convertAndSend("x.employee.work", "", employeeJson);
     }
 }
