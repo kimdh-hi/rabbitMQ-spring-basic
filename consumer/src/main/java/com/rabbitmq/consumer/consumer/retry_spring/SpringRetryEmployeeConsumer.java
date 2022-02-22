@@ -19,16 +19,16 @@ public class SpringRetryEmployeeConsumer {
         this.om = om;
     }
 
-    @RabbitListener(queues = {"q.employee.accounting.work"})
-    public void listenerAccounting(String message) throws IOException {
+    @RabbitListener(queues = {"q.employee.development.work"})
+    public void listenerDevelopment(String message) throws IOException {
         Employee employee = om.readValue(message, Employee.class);
         validateEmployee(employee);
 
-        LOG.info("accounting employee: {}", employee);
+        LOG.info("development employee: {}", employee);
     }
 
     @RabbitListener(queues = {"q.employee.marketing.work"})
-    public void listerVector(String message) throws IOException {
+    public void listenerMarketing(String message) throws IOException {
         Employee employee = om.readValue(message, Employee.class);
         validateEmployee(employee);
 
