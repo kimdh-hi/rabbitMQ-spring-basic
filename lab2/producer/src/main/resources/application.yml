@@ -1,0 +1,7 @@
+spring:
+  main:
+    banner-mode: OFF
+  rabbitmq:
+    addresses: localhost:5672
+    username: guest
+    password: guest
