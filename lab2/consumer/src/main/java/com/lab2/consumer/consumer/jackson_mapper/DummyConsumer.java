@@ -11,7 +11,7 @@ public class DummyConsumer {
 
     private static final Logger LOG = LoggerFactory.getLogger(DummyConsumer.class);
 
-    @RabbitListener(queues = {"q.dummy"})
+    @RabbitListener(queues = {"q.dummy"}, id = "q_dummy")
     private void listener(DummyMessage message) {
         LOG.info("dummyMessage={}", message);
     }
