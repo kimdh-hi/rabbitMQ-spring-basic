@@ -1,4 +1,4 @@
-package com.lab2.producer;
+package com.lab2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

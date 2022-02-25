@@ -1,9 +1,10 @@
-package com.lab2.producer.entity;
+package com.lab2.entity;
 
 public class DummyMessage {
 
     private String content;
-    private int publishOrder;
+    private int publishOrder
+            ;
 
     public DummyMessage() {
     }

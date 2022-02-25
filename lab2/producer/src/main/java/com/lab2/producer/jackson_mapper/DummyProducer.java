@@ -1,10 +1,9 @@
-package com.lab2.producer.producer.jackson_mapper;
+package com.lab2.producer.jackson_mapper;
 
-import com.lab2.producer.entity.DummyMessage;
+import com.lab2.entity.DummyMessage;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class DummyProducer {
 
     private final RabbitTemplate rabbitTemplate;

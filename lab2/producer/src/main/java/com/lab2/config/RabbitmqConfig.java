@@ -1,4 +1,4 @@
-package com.lab2.producer.config;
+package com.lab2.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;

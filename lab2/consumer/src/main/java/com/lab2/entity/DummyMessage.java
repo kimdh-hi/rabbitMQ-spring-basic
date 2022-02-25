@@ -1,7 +1,6 @@
-package com.lab2.consumer.entity;
+package com.lab2.entity;
 
 public class DummyMessage {
-
     private String content;
     private int publishOrder;
 
