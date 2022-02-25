@@ -1,5 +1,6 @@
 package com.lab2;
 
+import com.lab2.entity.InvoiceCanceledMessage;
 import com.lab2.entity.InvoiceCreatedMessage;
 import com.lab2.entity.InvoicePaidMessage;
 import com.lab2.producer.multiple_message_type.InvoiceProducer;
@@ -30,5 +31,9 @@ public class TestRunner implements CommandLineRunner {
         InvoicePaidMessage paidMessage = new InvoicePaidMessage(invoiceNumber, LocalDate.now(), paymentNumber);
         producer.sendInvoicePaid(paidMessage);
 
+        invoiceNumber = "INV-" + ThreadLocalRandom.current().nextInt(100, 200);
+        String cancelNumber = "PAY-" + ThreadLocalRandom.current().nextInt(800, 1000);
+        InvoiceCanceledMessage cancelMessage = new InvoiceCanceledMessage(LocalDate.now(), invoiceNumber, cancelNumber, "reason");
+        producer.sendInvoiceCanceled(cancelMessage);
     }
 }

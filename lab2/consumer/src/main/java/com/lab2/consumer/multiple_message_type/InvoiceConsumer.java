@@ -24,4 +24,8 @@ public class InvoiceConsumer {
         LOG.info("invoicePaid message={}", message);
     }
 
+    @RabbitHandler(isDefault = true)
+    public void handleDefaultTypeMessage(Object message) {
+        LOG.info("invoice default-handler={}", message);
+    }
 }

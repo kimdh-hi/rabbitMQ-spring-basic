@@ -1,5 +1,6 @@
 package com.lab2.producer.multiple_message_type;
 
+import com.lab2.entity.InvoiceCanceledMessage;
 import com.lab2.entity.InvoiceCreatedMessage;
 import com.lab2.entity.InvoicePaidMessage;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -21,6 +22,10 @@ public class InvoiceProducer {
     }
 
     public void sendInvoicePaid(InvoicePaidMessage message) {
+        rabbitTemplate.convertAndSend(EXCHANGE, "", message);
+    }
+
+    public void sendInvoiceCanceled(InvoiceCanceledMessage message) {
         rabbitTemplate.convertAndSend(EXCHANGE, "", message);
     }
 }
