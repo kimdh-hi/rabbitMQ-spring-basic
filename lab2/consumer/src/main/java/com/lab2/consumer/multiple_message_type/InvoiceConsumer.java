@@ -9,7 +9,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 
 @RabbitListener(queues = {"q.invoice"})
-@Service
+//@Service
 public class InvoiceConsumer {
 
     private static final Logger LOG = LoggerFactory.getLogger(InvoiceConsumer.class);
