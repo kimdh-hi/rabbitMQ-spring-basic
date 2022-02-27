@@ -2,6 +2,8 @@ package com.lab2;
 
 import com.lab2.entity.test.TestEntityA;
 import com.lab2.entity.test.TestEntityB;
+import com.lab2.entity.test.TestEntityC;
+import com.lab2.entity.test.TestEntityD;
 import com.lab2.producer.review.TestProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -21,6 +23,12 @@ public class TestRunner implements CommandLineRunner {
 
         TestEntityB testEntityB = new TestEntityB(2L, "nameB", "descriptionB", LocalDate.now());
         producer.sendMessageEntityB(testEntityB);
+
+        TestEntityC testEntityC = new TestEntityC(3L, "nameC", "descriptionC", LocalDate.now());
+        producer.sendMessageEntityC(testEntityC);
+
+        TestEntityD testEntityD = new TestEntityD(4L, "nameD", "descriptionD", LocalDate.now());
+        producer.sendMessageEntityD(testEntityD);
     }
 
     //    @Autowired

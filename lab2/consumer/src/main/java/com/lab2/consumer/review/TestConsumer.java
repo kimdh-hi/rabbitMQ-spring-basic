@@ -23,4 +23,9 @@ public class TestConsumer {
     public void listenerB(TestEntityB testEntityB) {
         LOG.info("TestB = {}", testEntityB);
     }
+
+    @RabbitHandler(isDefault = true)
+    public void listenerDefault(Object obj) {
+        LOG.info("Test Default = {}", obj);
+    }
 }

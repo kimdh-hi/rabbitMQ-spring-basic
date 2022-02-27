@@ -6,7 +6,7 @@ import com.lab2.entity.InvoicePaidMessage;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
-//@Service
+@Service
 public class InvoiceProducer {
 
     private final RabbitTemplate rabbitTemplate;
