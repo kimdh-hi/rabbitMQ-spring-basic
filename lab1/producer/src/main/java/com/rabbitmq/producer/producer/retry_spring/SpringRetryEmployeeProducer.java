@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
-@Service
+//@Service
 public class SpringRetryEmployeeProducer {
 
     private final RabbitTemplate rabbitTemplate;
